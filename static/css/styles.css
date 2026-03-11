@@ -1,0 +1,73 @@
+:root[data-theme="light"] {
+    --text: #fcfdfd;
+    --primary: #1B1B1E;
+    --secondary: #FFB5A7;
+    --accent: #1B1B1E;
+    background-size: cover;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: #1B1B1E no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: #fcfdfd;
+    height: 100vh;
+    background-image: url("../images/speech_recognition.jpg");
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+form {
+    background-color: #1B1B1E;
+    border: 1px solid #FFB5A7;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+label {
+    color: #fcfdfd;
+    font-size: 18px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+select, input[type="file"] {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #FFB5A7;
+    border-radius: 5px;
+}
+
+button {
+    padding: 12px 24px;
+    background-color: #a3815c;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #ffb5a7;
+    color: #1B1B1E;
+}
+
+pre {
+    background-color: #1B1B1E;
+    border: 1px solid #FFB5A7;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: left;
+    color: #fcfdfd;
+    white-space: pre-wrap;
+}

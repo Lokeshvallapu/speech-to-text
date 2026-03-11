@@ -1,0 +1,5 @@
+Flask
+SpeechRecognition
+moviepy
+pydub
+ffmpeg-python

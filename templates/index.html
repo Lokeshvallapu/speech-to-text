@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Speech Recognition</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='css/styles.css') }}"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+  <body>
+    <div id="top-left">
+      <span id="restart"><b style="color: #a3815c; font-size:x-large;">Speech 2 Text Transcription</b></span>
+    </div>
+
+    <form method="POST" enctype="multipart/form-data">
+      <label for="input_type">Select Input Type:</label>
+      <select id="input_type" name="input_type">
+        <option>Select input type</option>
+        <option value="microphone">Microphone</option>
+        <option value="audio_file">Audio File</option>
+        <option value="video_file">Video File</option>
+      </select>
+      <br /><br />
+
+      <div id="microphone_input" class="input_div">
+        <button type="submit" name="microphone">Start Microphone Input</button>
+      </div>
+
+      <div id="audio_file_input" class="input_div">
+        <label for="audio_file">Upload Audio File:</label>
+        <input type="file" id="audio_file" name="audio_file" />
+        <button type="submit" name="audio">Recognize Audio</button>
+      </div>
+
+      <div id="video_file_input" class="input_div">
+        <label for="video_file">Upload Video File:</label>
+        <input type="file" id="video_file" name="video_file" />
+        <button type="submit" name="video">Recognize Video</button>
+      </div>
+    </form>
+
+    <hr />
+    <div id="loading-screen" style="display:none;">Loading...</div>
+
+    {% if transcript %}
+      <h2 style="color: #a3815c; font-size:large;">Transcript:</h2>
+      <pre>{{ transcript }}</pre>
+
+      <form action="/save_transcript" method="post">
+        <input type="hidden" name="transcript" value="{{ transcript }}" />
+        <button type="submit">💾 Save Transcript</button>
+      </form>
+    {% endif %}
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+  </body>
+</html>

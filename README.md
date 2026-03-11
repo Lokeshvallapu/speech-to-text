@@ -33,6 +33,9 @@ Speech to Text Transcription using Flask, Whisper AI, and SpeechRecognition. Sup
 5. Open in browser
    "http://127.0.0.1:0000"
 
+6. ## Application Screenshot
+
+
 
 
 

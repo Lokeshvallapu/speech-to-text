@@ -16,8 +16,8 @@
 
     <form method="POST" enctype="multipart/form-data">
       <label for="input_type">Select Input Type:</label>
-      <select id="input_type" name="input_type">
-        <option>Select input type</option>
+      <select id="input_type" name="input_type" required>
+        <option value="">Select input type</option>
         <option value="microphone">Microphone</option>
         <option value="audio_file">Audio File</option>
         <option value="video_file">Video File</option>
@@ -41,18 +41,22 @@
       </div>
     </form>
 
-    <hr />
+    <hr>
     <div id="loading-screen" style="display:none;">Loading...</div>
 
     {% if transcript %}
       <h2 style="color: #a3815c; font-size:large;">Transcript:</h2>
-      <pre>{{ transcript }}</pre>
+      <pre style="background:#111;padding: 15px;border: radius 8px;">{{ transcript }}</pre>
 
-      <form action="/save_transcript" method="post">
-        <input type="hidden" name="transcript" value="{{ transcript }}" />
-        <button type="submit">💾 Save Transcript</button>
-      </form>
     {% endif %}
+
+    {% if message %}
+
+   <p style="color:red;">
+   {{ message }}
+   </p>
+
+{% endif %}
 
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
   </body>

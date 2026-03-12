@@ -1,7 +1,8 @@
-Flask
-SpeechRecognition
-moviepy
-pydub
+Flask==3.0.0
+SpeechRecognition==3.10.0
+moviepy==1.0.3
+pydub==0.25.1
 ffmpeg-python
+imageio-ffmpeg
 openai-whisper
 werkzeug

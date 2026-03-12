@@ -34,8 +34,6 @@ Speech to Text Transcription using Flask, Whisper AI, and SpeechRecognition. Sup
    "http://127.0.0.1:0000"
 
 6. ## Application Screenshot
-
-
-
+   ![Application Screenshot](screen-shots/app-ui.png.png)
 
 
